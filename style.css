@@ -1,0 +1,189 @@
+/* ------------Шрифты--------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* @font-face {
+    font-family: "Roboto"; 
+    src: url("fonts/Roboto-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    } 
+@font-face {
+    font-family: "RobotoBold"; 
+    src: url("fonts/Roboto-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    } 
+
+     */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to bottom, #2b3b37, #8ca6a2) no-repeat;
+    font-family:'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+/* --------Основной блок----------- */
+
+main{
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+    background-color: #fff;
+}
+
+/* --------Шапка-------- */
+
+header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    position: relative;
+}
+
+    /* ----------Логотип----------- */
+
+    .header__logo{
+        height: 190px;
+        background: url(img/top_banner.jpg) no-repeat;
+    }
+    .header__logo::before{
+        content: url(img/logo.png);
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+
+    /* --------Меню---------- */
+
+    .menu{
+        display: flex;
+    }
+    .menu__item{
+        list-style-type: none;
+        flex-grow: 1;
+        flex-basis:calc(800px/7);
+        text-align: center;
+        padding: 8px 0px;
+        font-size: 12px;
+        color: #fff;
+    }
+    .menu__item:nth-child(odd){
+        background: #4B96AD;
+    }
+    .menu__item:nth-child(even){
+        background: #133457;
+    }
+
+/* ----------Контент-------------- */
+
+article{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 30px 0px 30px 28px;
+    position: relative;
+    background: url(img/top_left_corner.png) no-repeat;
+}
+    article h1{
+        color: #265171;
+        font-size: 21px;
+       
+        margin-bottom: 15px;
+    }
+    article p, span{
+        font-size: 14px ;
+        color: #333;
+        line-height: 21px;
+    }
+    article li{
+        color: #4B96AD;
+        margin-left: 15px;
+    }
+    article img{
+        margin-top: 14px;
+        width: 100%;
+    }
+    .article__post{
+        background: #EBEACA;
+        margin: 30px 0;
+        padding: 10px;
+        outline:1px solid #FFf;
+        outline-offset: -4px;
+    }
+
+/* -----------------sidebar------------- */
+aside{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    padding: 30px 28px 30px 0px;
+   
+}
+    aside h1{
+        color:#8DAA10;
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+    aside p{
+        font: 14px Roboto;
+        color: #333;
+        line-height: 1.5em;
+            
+    }
+    aside>img{
+        padding: 45px 0px 30px 0px;
+    }
+    /* .aside__text img{
+        position: absolute;
+        right: 30px;
+    } */
+    .more {
+        display:block;
+        margin-top: 30px;
+        border-top: 1px dashed #8BA4A0;
+        height: 16px;
+        background-image: url(img/read_more.png);
+        background-repeat:no-repeat;
+        background-position: right;
+        
+    }
+    aside b{
+        color: #133457;
+    }
+    
+/* ---------------Подвал -----------------*/
+footer{
+    background: url(img/footer_bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+    footer ul{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: 30px;
+    }
+    footer li{
+        list-style-type: none;
+        text-align: center;
+        font: 12px Roboto;
+        float: left;
+        margin: 0px 8px
+    }
+    footer span{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        color: #fff;
+        padding: 30px 0px;
+        font: 12px Roboto;
+    }
+    
+    
